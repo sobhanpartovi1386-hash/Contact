@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+
 * {
     box-sizing: border-box;
 }
@@ -18,18 +19,32 @@
 body {
     margin: 0;
     min-height: 100vh;
+
     background:
-        radial-gradient(circle at 50% 5%, rgba(0,255,220,.20), transparent 30%),
-        radial-gradient(circle at 10% 90%, rgba(255,0,170,.13), transparent 30%),
-        radial-gradient(circle at 90% 80%, rgba(0,150,255,.14), transparent 30%),
+        radial-gradient(
+            circle at 50% 5%,
+            rgba(0,255,220,.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 10% 90%,
+            rgba(255,0,170,.13),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(0,150,255,.14),
+            transparent 30%
+        ),
         #020304;
 
     color: white;
+
     font-family: 'Vazirmatn', sans-serif;
 
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
     padding: 30px 15px;
 }
@@ -37,38 +52,44 @@ body {
 .container {
     width: 100%;
     max-width: 430px;
+
     text-align: center;
 }
 
 .title {
     font-size: 40px;
     font-weight: 800;
+
     margin-bottom: 8px;
 
-    background: linear-gradient(
-        90deg,
-        #00ffe0,
-        #ffffff,
-        #00c8ff
-    );
+    background:
+        linear-gradient(
+            90deg,
+            #00ffe0,
+            #ffffff,
+            #00c8ff
+        );
 
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     text-shadow:
-        0 0 15px rgba(0,255,220,.5),
-        0 0 35px rgba(0,255,220,.2);
+        0 0 15px rgba(0,255,220,.55),
+        0 0 35px rgba(0,255,220,.25);
 }
 
 .subtitle {
-    color: #9ba5a8;
+    color: #9aa5a8;
+
     font-size: 14px;
+
     margin-bottom: 35px;
 }
 
 .links {
     display: flex;
     flex-direction: column;
+
     gap: 16px;
 }
 
@@ -85,6 +106,7 @@ body {
     border-radius: 20px;
 
     text-decoration: none;
+
     color: white;
 
     font-size: 17px;
@@ -107,23 +129,23 @@ body {
     transform: scale(.97);
 }
 
-/* ICON */
-
 .icon {
     position: absolute;
+
     right: 20px;
 
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 }
 
 .icon img {
-    width: 30px;
-    height: 30px;
+    width: 34px;
+    height: 34px;
 
     object-fit: contain;
 
@@ -149,8 +171,9 @@ body {
 }
 
 .phone-icon {
-    font-size: 26px;
+    font-size: 27px;
 }
+
 
 /* INSTAGRAM */
 
@@ -170,6 +193,7 @@ body {
         0 0 50px rgba(255,0,150,.20);
 }
 
+
 /* TELEGRAM */
 
 .telegram {
@@ -188,9 +212,6 @@ body {
         0 0 50px rgba(0,180,255,.20);
 }
 
-.telegram-fallback {
-    font-size: 25px;
-}
 
 /* FOOTER */
 
@@ -204,6 +225,7 @@ body {
     letter-spacing: 3px;
 }
 
+
 @media (max-width: 480px) {
 
     .title {
@@ -213,9 +235,13 @@ body {
     .link {
         min-height: 62px;
     }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
@@ -232,7 +258,8 @@ body {
 
     <div class="links">
 
-        <!-- شماره تماس -->
+
+        <!-- PHONE -->
 
         <a
             class="link phone"
@@ -248,7 +275,8 @@ body {
         </a>
 
 
-        <!-- Instagram -->
+
+        <!-- INSTAGRAM -->
 
         <a
             class="link instagram"
@@ -259,9 +287,8 @@ body {
             <span class="icon">
 
                 <img
-                    src="/Contact/insta-logo2.png"
+                    src="insta-logo2.png"
                     alt="Instagram"
-                    onerror="this.style.display='none'; this.parentElement.innerHTML='◎';"
                 >
 
             </span>
@@ -271,7 +298,8 @@ body {
         </a>
 
 
-        <!-- Telegram -->
+
+        <!-- TELEGRAM -->
 
         <a
             class="link telegram"
@@ -282,9 +310,8 @@ body {
             <span class="icon">
 
                 <img
-                    src="/Contact/telegram-logo1.png"
+                    src="telegram-logo1.png"
                     alt="Telegram"
-                    onerror="this.style.display='none'; this.parentElement.innerHTML='➤';"
                 >
 
             </span>
@@ -292,6 +319,7 @@ body {
             Telegram
 
         </a>
+
 
     </div>
 
