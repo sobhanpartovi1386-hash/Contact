@@ -19,20 +19,23 @@ body {
     margin: 0;
     min-height: 100vh;
     background:
-        radial-gradient(circle at 50% 5%, rgba(0,255,220,.22), transparent 30%),
-        radial-gradient(circle at 10% 90%, rgba(255,0,170,.12), transparent 28%),
-        radial-gradient(circle at 90% 80%, rgba(0,150,255,.14), transparent 28%),
+        radial-gradient(circle at 50% 5%, rgba(0,255,220,.20), transparent 30%),
+        radial-gradient(circle at 10% 90%, rgba(255,0,170,.13), transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(0,150,255,.14), transparent 30%),
         #020304;
-    color: #fff;
+
+    color: white;
     font-family: 'Vazirmatn', sans-serif;
+
     display: flex;
-    align-items: center;
     justify-content: center;
-    overflow: hidden;
+    align-items: center;
+
+    padding: 30px 15px;
 }
 
 .container {
-    width: 90%;
+    width: 100%;
     max-width: 430px;
     text-align: center;
 }
@@ -41,16 +44,24 @@ body {
     font-size: 40px;
     font-weight: 800;
     margin-bottom: 8px;
-    background: linear-gradient(90deg, #00ffe0, #ffffff, #00c8ff);
+
+    background: linear-gradient(
+        90deg,
+        #00ffe0,
+        #ffffff,
+        #00c8ff
+    );
+
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
     text-shadow:
-        0 0 15px rgba(0,255,220,.55),
-        0 0 35px rgba(0,255,220,.25);
+        0 0 15px rgba(0,255,220,.5),
+        0 0 35px rgba(0,255,220,.2);
 }
 
 .subtitle {
-    color: #9aa5a8;
+    color: #9ba5a8;
     font-size: 14px;
     margin-bottom: 35px;
 }
@@ -63,13 +74,19 @@ body {
 
 .link {
     position: relative;
+
+    width: 100%;
+    min-height: 64px;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 64px;
+
     border-radius: 20px;
+
     text-decoration: none;
-    color: #fff;
+    color: white;
+
     font-size: 17px;
     font-weight: 600;
 
@@ -80,93 +97,115 @@ body {
             rgba(255,255,255,.025)
         );
 
-    border: 1px solid rgba(0,255,220,.35);
-
-    box-shadow:
-        0 0 18px rgba(0,255,220,.12),
-        inset 0 0 25px rgba(0,255,220,.035);
-
     backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
 
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease,
-        border-color .25s ease;
-}
-
-.link:hover {
-    transform: translateY(-4px);
+    transition: all .25s ease;
 }
 
 .link:active {
     transform: scale(.97);
 }
 
+/* ICON */
+
 .icon {
     position: absolute;
     right: 20px;
-    width: 30px;
-    height: 30px;
+
+    width: 32px;
+    height: 32px;
+
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .icon img {
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
+
     object-fit: contain;
+
     display: block;
 }
 
+/* PHONE */
+
 .phone {
-    border-color: rgba(0,255,150,.4);
+    border: 1px solid rgba(0,255,150,.45);
+
+    box-shadow:
+        0 0 18px rgba(0,255,150,.10),
+        inset 0 0 25px rgba(0,255,150,.03);
 }
 
 .phone:hover {
     border-color: #00ff9d;
+
     box-shadow:
-        0 0 20px rgba(0,255,150,.55),
-        0 0 45px rgba(0,255,150,.18),
-        inset 0 0 25px rgba(0,255,150,.08);
+        0 0 22px rgba(0,255,150,.55),
+        0 0 45px rgba(0,255,150,.18);
 }
 
+.phone-icon {
+    font-size: 26px;
+}
+
+/* INSTAGRAM */
+
 .instagram {
-    border-color: rgba(255,0,150,.45);
+    border: 1px solid rgba(255,0,150,.45);
+
+    box-shadow:
+        0 0 18px rgba(255,0,150,.10),
+        inset 0 0 25px rgba(255,0,150,.03);
 }
 
 .instagram:hover {
     border-color: #ff2bb5;
+
     box-shadow:
-        0 0 20px rgba(255,0,150,.65),
-        0 0 50px rgba(255,0,150,.2),
-        inset 0 0 25px rgba(255,0,150,.08);
+        0 0 22px rgba(255,0,150,.60),
+        0 0 50px rgba(255,0,150,.20);
 }
 
+/* TELEGRAM */
+
 .telegram {
-    border-color: rgba(0,180,255,.45);
+    border: 1px solid rgba(0,180,255,.45);
+
+    box-shadow:
+        0 0 18px rgba(0,180,255,.10),
+        inset 0 0 25px rgba(0,180,255,.03);
 }
 
 .telegram:hover {
     border-color: #00bfff;
+
     box-shadow:
-        0 0 20px rgba(0,180,255,.65),
-        0 0 50px rgba(0,180,255,.2),
-        inset 0 0 25px rgba(0,180,255,.08);
+        0 0 22px rgba(0,180,255,.60),
+        0 0 50px rgba(0,180,255,.20);
 }
 
-.phone-icon {
-    font-size: 27px;
+.telegram-fallback {
+    font-size: 25px;
 }
+
+/* FOOTER */
 
 .footer {
     margin-top: 32px;
+
     color: #596164;
+
     font-size: 11px;
+
     letter-spacing: 3px;
 }
 
 @media (max-width: 480px) {
+
     .title {
         font-size: 36px;
     }
@@ -190,10 +229,15 @@ body {
         برای ارتباط با ما انتخاب کنید
     </div>
 
+
     <div class="links">
 
-        <!-- تماس -->
-        <a class="link phone" href="tel:+989196826138">
+        <!-- شماره تماس -->
+
+        <a
+            class="link phone"
+            href="tel:+989196826138"
+        >
 
             <span class="icon phone-icon">
                 ☎
@@ -203,24 +247,46 @@ body {
 
         </a>
 
+
         <!-- Instagram -->
-        <a class="link instagram"
-           href="https://instagram.com/studio_tapesh1">
+
+        <a
+            class="link instagram"
+            href="https://instagram.com/studio_tapesh1"
+            target="_blank"
+        >
 
             <span class="icon">
-                <img src="insta-logo2.png" alt="Instagram">
+
+                <img
+                    src="/Contact/insta-logo2.png"
+                    alt="Instagram"
+                    onerror="this.style.display='none'; this.parentElement.innerHTML='◎';"
+                >
+
             </span>
 
             Instagram
 
         </a>
 
+
         <!-- Telegram -->
-        <a class="link telegram"
-           href="https://t.me/studio_tapesh1">
+
+        <a
+            class="link telegram"
+            href="https://t.me/studio_tapesh1"
+            target="_blank"
+        >
 
             <span class="icon">
-                <img src="telegram-logo1.png" alt="Telegram">
+
+                <img
+                    src="/Contact/telegram-logo1.png"
+                    alt="Telegram"
+                    onerror="this.style.display='none'; this.parentElement.innerHTML='➤';"
+                >
+
             </span>
 
             Telegram
@@ -229,243 +295,6 @@ body {
 
     </div>
 
-    <div class="footer">
-        STUDIO TAPESH
-    </div>
-
-</div>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>استودیو تپش</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    min-height: 100vh;
-    background:
-        radial-gradient(circle at 50% 5%, rgba(0,255,220,.22), transparent 30%),
-        radial-gradient(circle at 10% 90%, rgba(255,0,170,.12), transparent 28%),
-        radial-gradient(circle at 90% 80%, rgba(0,150,255,.14), transparent 28%),
-        #020304;
-    color: #fff;
-    font-family: 'Vazirmatn', sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.container {
-    width: 90%;
-    max-width: 430px;
-    text-align: center;
-}
-
-.title {
-    font-size: 40px;
-    font-weight: 800;
-    margin-bottom: 8px;
-    background: linear-gradient(90deg, #00ffe0, #ffffff, #00c8ff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow:
-        0 0 15px rgba(0,255,220,.55),
-        0 0 35px rgba(0,255,220,.25);
-}
-
-.subtitle {
-    color: #9aa5a8;
-    font-size: 14px;
-    margin-bottom: 35px;
-}
-
-.links {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.link {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 64px;
-    border-radius: 20px;
-    text-decoration: none;
-    color: #fff;
-    font-size: 17px;
-    font-weight: 600;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(255,255,255,.09),
-            rgba(255,255,255,.025)
-        );
-
-    border: 1px solid rgba(0,255,220,.35);
-
-    box-shadow:
-        0 0 18px rgba(0,255,220,.12),
-        inset 0 0 25px rgba(0,255,220,.035);
-
-    backdrop-filter: blur(18px);
-
-    transition:
-        transform .25s ease,
-        box-shadow .25s ease,
-        border-color .25s ease;
-}
-
-.link:hover {
-    transform: translateY(-4px);
-}
-
-.link:active {
-    transform: scale(.97);
-}
-
-.icon {
-    position: absolute;
-    right: 20px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.icon img {
-    width: 28px;
-    height: 28px;
-    object-fit: contain;
-    display: block;
-}
-
-.phone {
-    border-color: rgba(0,255,150,.4);
-}
-
-.phone:hover {
-    border-color: #00ff9d;
-    box-shadow:
-        0 0 20px rgba(0,255,150,.55),
-        0 0 45px rgba(0,255,150,.18),
-        inset 0 0 25px rgba(0,255,150,.08);
-}
-
-.instagram {
-    border-color: rgba(255,0,150,.45);
-}
-
-.instagram:hover {
-    border-color: #ff2bb5;
-    box-shadow:
-        0 0 20px rgba(255,0,150,.65),
-        0 0 50px rgba(255,0,150,.2),
-        inset 0 0 25px rgba(255,0,150,.08);
-}
-
-.telegram {
-    border-color: rgba(0,180,255,.45);
-}
-
-.telegram:hover {
-    border-color: #00bfff;
-    box-shadow:
-        0 0 20px rgba(0,180,255,.65),
-        0 0 50px rgba(0,180,255,.2),
-        inset 0 0 25px rgba(0,180,255,.08);
-}
-
-.phone-icon {
-    font-size: 27px;
-}
-
-.footer {
-    margin-top: 32px;
-    color: #596164;
-    font-size: 11px;
-    letter-spacing: 3px;
-}
-
-@media (max-width: 480px) {
-    .title {
-        font-size: 36px;
-    }
-
-    .link {
-        min-height: 62px;
-    }
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-    <div class="title">
-        استودیو تپش
-    </div>
-
-    <div class="subtitle">
-        برای ارتباط با ما انتخاب کنید
-    </div>
-
-    <div class="links">
-
-        <!-- تماس -->
-        <a class="link phone" href="tel:+989196826138">
-
-            <span class="icon phone-icon">
-                ☎
-            </span>
-
-            09196826138
-
-        </a>
-
-        <!-- Instagram -->
-        <a class="link instagram"
-           href="https://instagram.com/studio_tapesh1">
-
-            <span class="icon">
-                <img src="insta-logo2.png" alt="Instagram">
-            </span>
-
-            Instagram
-
-        </a>
-
-        <!-- Telegram -->
-        <a class="link telegram"
-           href="https://t.me/studio_tapesh1">
-
-            <span class="icon">
-                <img src="telegram-logo1.png" alt="Telegram">
-            </span>
-
-            Telegram
-
-        </a>
-
-    </div>
 
     <div class="footer">
         STUDIO TAPESH
